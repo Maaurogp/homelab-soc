@@ -41,7 +41,7 @@
 
 ## 📐 Matriz de Máquinas Virtuales (Proxmox VE)
 
-| VM ID | Name | OS / Rol | vCPU / RAM / Disk | Interface / Tag | Status |
+| VM ID | Name | OS / Rol | vCPU / RAM / Disk | Interface / Tag | 
 | --- | --- | --- | --- | --- | --- |
 | `100` | `pfSense-Firewall` | pfSense Firewall / Router | 2 Cores / 2.00 GiB / 20 GB | `vmbr0` (WAN) & `vmbr1` (Trunk) |
 | `101` | `Debian-vlan1` | Debian Admin Station (GUI) | 3 Cores / 4.00 GiB / 30 GB | `vmbr1` (VLAN Tag: 1) |
