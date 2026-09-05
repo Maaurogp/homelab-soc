@@ -21,8 +21,8 @@ System error 86 (contraseña de red incorrecta).
 Evento individual capturado: regla `60122`, nivel 5, agente `DESKTOP-LJV4V4B`.
 
 ### 4. Análisis del Mapeo MITRE — Primer hallazgo
-![Mapeo T1531](../media/MITRE-ATT_CK-T1531.png)
-![Detalle T1531](../media/MITRE-ATT_CK-T1531-EXP.png)
+![Mapeo T1531](../media/MITRE-ATT&CK-T1531.png)
+![Detalle T1531](../media/MITRE-ATT&CK-T1531-EXP.png)
 
 El evento individual (regla 60122) aparece mapeado por Wazuh a **T1531
 (Account Access Removal, táctica Impact)**. Al revisar la definición oficial
