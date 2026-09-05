@@ -39,14 +39,20 @@
 
 ---
 
-### Matriz de Máquinas Virtuales
+## 📐 Matriz de Máquinas Virtuales (Proxmox VE)
 
-| Nombre de VM | Sistema Operativo | vCPU | Memoria RAM | Almacenamiento | Dirección IP | Estado |
-| :--- | :--- | :---: | :---: | :---: | :--- | :---: |
-| `vm-web-01` | Ubuntu 22.04 LTS | 2 | 4 GB | 50 GB SSD | `192.168.1.50` | Activa |
-| `vm-db-01` | Debian 12 | 4 | 8 GB | 150 GB SSD | `192.168.1.51` | Activa |
-| `vm-app-02` | Windows Server 2022 | 4 | 16 GB | 200 GB SSD | `192.168.1.55` | Detenida |
-
+| VM ID | Name                       | OS / Rol                                | vCPU / RAM / Disk          | Interface / Tag                 |
+| ----- | -------------------------- | --------------------------------------- | -------------------------- | ------------------------------- |
+| `100` | `pfSense-Firewall`         | pfSense Firewall / Router               | 2 Cores / 2.00 GiB / 20 GB | `vmbr0` (WAN) & `vmbr1` (Trunk) |
+| `101` | `Debian-vlan1`             | Debian Admin Station (GUI)              | 3 Cores / 4.00 GiB / 30 GB | `vmbr1` (VLAN Tag: 1)           |
+| `102` | `Ubuntu-vlan30`            | Ubuntu Server (Docker Host)             | 3 Cores / 3.02 GiB / 50 GB | `vmbr1` (VLAN Tag: 30)          |
+| `103` | `Prod-ms2-vlan10`          | Microservicios Target / DMZ             | 2 Cores / 2.00 GiB / 20 GB | `vmbr1` (VLAN Tag: 10)          |
+| `104` | `Prod-Wazuh-vlan1`         | Ubuntu Server (Wazuh SIEM)              | 4 Cores / 8.00 GiB / 30 GB | `vmbr1` (VLAN Tag: 1)           |
+| `105` | `Prod-Nessus-vlan1`        | Nessus Vulnerability Scanner            | 4 Cores / 4.00 GiB / 30 GB | `vmbr1` (VLAN Tag: 1)           |
+| `106` | `Prod-Caldera-vlan1`       | CALDERA Adversary Emulation             | 4 Cores / 3.02 GiB / 20 GB | `vmbr1` (VLAN Tag: 1)           |
+| `107` | `Prod-SO-vlan1-55`         | Security Onion (NSM/SOAR)               | 4 Cores / 8.00 GiB / 50 GB | `vmbr1` (VLAN Tag: 1)           |
+| `108` | `Prod-Win10-Client`        | Windows 10 Home (Target Endpoint)       | 4 Cores / 4.00 GiB / 50 GB | `vmbr1` (VLAN Tag: 20)          |
+| `109` | `Prod-DC-WinServer-vlan20` | Windows Server 2025 (Domain Controller) | 2 Cores / 4.00 GiB / 40 GB | `vmbr1` (VLAN Tag: 20)          |
 ---
 
 ## 🔍 Inventario Detallado de Servicios e IPs Internas
