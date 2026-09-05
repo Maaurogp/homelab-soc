@@ -10,12 +10,14 @@ de logon y aplica un mapeo MITRE más preciso.
 
 ### 2. Evidencia — Generación del Evento
 ![Comando ejecutado](../media/Prod-Win10-INCPass.png)
+
 Comando ejecutado en PowerShell contra el recurso SMB local, con credenciales
 inválidas para un usuario inexistente en el dominio. Windows devuelve el
 System error 86 (contraseña de red incorrecta).
 
 ### 3. Evidencia — Detección Individual en Wazuh
 ![Detección regla 60122](../media/rule-id-60122.png)
+
 Evento individual capturado: regla `60122`, nivel 5, agente `DESKTOP-LJV4V4B`.
 
 ### 4. Análisis del Mapeo MITRE — Primer hallazgo
