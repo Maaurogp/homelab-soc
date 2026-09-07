@@ -21,9 +21,9 @@ System error 86 (contraseña de red incorrecta).
 Evento individual capturado: regla `60122`, nivel 5, agente `DESKTOP-LJV4V4B`.
 
 ### 4. Análisis del Mapeo MITRE — Primer hallazgo
-![Mapeo T1531](../media/MITRE-ATT&CK-T1531.png)
+![Mapeo T1531](../media/MITRE-ATT4CK-T1531.png)
 
-![Detalle T1531](../media/MITRE-ATT&CK-T1531-EXP.png)
+![Detalle T1531](../media/MITRE-ATT4CK-T1531-EXP.png)
 
 El evento individual (regla 60122) aparece mapeado por Wazuh a **T1531
 (Account Access Removal, táctica Impact)**. Al revisar la definición oficial
@@ -34,9 +34,9 @@ el mapeo automático de un SIEM como verdad absoluta sin validarlo contra la
 definición técnica de la táctica/técnica.
 
 ### 5. Evidencia — Detección de Correlación (Mapeo Correcto)
-![Regla 60204](../media/MITRE-ATT&CK-T1110.png)
+![Regla 60204](../media/MITRE-ATT4CK-T1110.png)
 
-![Detalle T1110](../media/MITRE-ATT&CK-T1110-EXP.png)
+![Detalle T1110](../media/MITRE-ATT4CK-T1110-EXP.png)
 
 Al buscar `rule.mitre.id:T1110` en Threat Hunting, se identificó la regla
 `60204` ("Múltiples fallas de Windows Logon"), nivel **10**, correctamente
