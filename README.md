@@ -22,14 +22,7 @@ escenarios de emulación) a medida que avanzo en mi carrera.
 
 ## Casos de uso documentados
 
-1. **[Fuerza bruta sobre SMB (T1110)](incident-reports/01-fuerza-bruta-smb-t1110.md)**
-   — Detección de intentos de autenticación fallida, incluyendo la
-   identificación de una inconsistencia en el mapeo MITRE automático de
-   Wazuh entre el evento individual y la regla de correlación.
-2. **[Gap Analysis — Emulación de Discovery post-explotación](incident-reports/02-caldera-gap-analysis-discovery.md)**
-   — Ejecución de técnicas MITRE ATT&CK (Discovery/Defense Evasion) contra
-   el Domain Controller, con hallazgo de una brecha real entre recolección
-   de telemetría y reglas de correlación activas en el SIEM.
+> En reconstrucción — ver /archive para la versión anterior.
 
 ## Documentación técnica completa
 
