@@ -43,3 +43,16 @@ Se registró telemetría de red proveniente del endpoint `DESKTOP-LJV4V4B` (10.1
     }
   }
 }
+```
+
+---
+
+## 5. Triage
+
+- **Severidad (S):** S1 (Level 3 - Bajo, regla `92105`)
+- **Criticidad (C):** C3 (Destino: Domain Controller, VM109)
+- **Confianza (F):** F1 (Ejecución manual, sin operación CALDERA que la respalde — única fuente: el evento Sysmon/Wazuh)
+- **Prioridad Final:** **P4** (P3 de la matriz, bajado un nivel por F1)
+- *Justificación:* a diferencia de los casos 1 y 2, acá no hay un segundo log independiente que confirme intención — el propio gap de que ni CALDERA ni Wazuh dispararon nada automáticamente es parte del hallazgo. Un analista real lo marcaría para revisión, no para descarte directo.
+
+---
