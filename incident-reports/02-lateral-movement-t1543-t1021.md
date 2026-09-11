@@ -1,7 +1,9 @@
 # Incident Report 02: Movimiento Lateral vía Creación de Servicios (T1543.003 / T1021.002)
 
+
 ## 1. Resumen Ejecutivo
 Se ejecutó una técnica de movimiento lateral desde el endpoint `VM108` hacia el Controlador de Dominio `VM109`. El ataque utilizó privilegios elevados del agente para autenticarse remotamente y crear un servicio en el DC, consolidando acceso sin necesidad de extraer credenciales previamente.
+
 
 ---
 
@@ -12,26 +14,28 @@ Se ejecutó una técnica de movimiento lateral desde el endpoint `VM108` hacia e
   * Rule `60106` (Windows Logon Success) - Event ID 4624
 * **Indicador de Compromiso (IoC):** Logon Type `3` (Network Logon) originado desde la IP de la VM108 hacia el DC.
 
+
 ---
 
 ## 3. Mapeo MITRE ATT&CK®
 
-| Táctica | Técnica | ID |
-| :--- | :--- | :--- |
-| **Lateral Movement** | Remote Services: SMB/Windows Admin Shares | `T1021.002` |
+| Táctica                                | Técnica                                          | ID          |
+| :------------------------------------- | :----------------------------------------------- | :---------- |
+| **Lateral Movement**                   | Remote Services: SMB/Windows Admin Shares        | `T1021.002` |
 | **Privilege Escalation / Persistence** | Create or Modify System Process: Windows Service | `T1543.003` |
+
 
 ---
 
 ## 4. Análisis de Brecha (Gap Analysis)
 Se identificó una brecha de detección (Gap). El inicio de sesión remoto (Logon Type 3) generó el evento `60106` con `level 3`. Al estar por debajo del umbral de alerta (level 5+), el SOC no recibiría una notificación activa sobre este movimiento lateral hacia un activo crítico (Domain Controller).
 
+
 ---
 
 ### Evidencia de Movimiento Lateral (Wazuh)
 ![Movimiento Lateral - Evento 60106](../media/Lateral-Movement-VM108.png)
 
----
 
 ---
 
