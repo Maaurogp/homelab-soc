@@ -40,6 +40,14 @@ Los binarios nativos del sistema (*LOLBins*) utilizados para reconocimiento suel
 Se definió la regla `100012` para elevar a **Nivel 8** las alertas cuando se detecte la invocación CLI de patrones de reconocimiento conocidos:
 
 ```xml
+
+### Evidencia de Ejecución (CALDERA)
+![Descubrimiento CALDERA](../media/Descubrimiento%20por%20caldera.png)
+
+### Telemetría Recolectada (Wazuh)
+![Descubrimiento Wazuh](../media/Descubrimiento%20Wazuh.png)
+
+
 <!-- Regla Custom 100012: Detección de Comandos de Discovery en CLI (VM108 Gap Fix) -->
 <rule id="100012" level="8">
   <if_sid>61600</if_sid>
