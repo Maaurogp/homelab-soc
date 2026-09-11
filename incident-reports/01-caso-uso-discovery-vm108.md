@@ -39,7 +39,9 @@ Los binarios nativos del sistema (*LOLBins*) utilizados para reconocimiento suel
 ### Regla Personalizada Creada (`/var/ossec/etc/rules/local_rules.xml`)
 Se definió la regla `100012` para elevar a **Nivel 8** las alertas cuando se detecte la invocación CLI de patrones de reconocimiento conocidos:
 
-### Evidencia de Ejecución (CALDERA)
+---
+
+## Evidencia de Ejecución (CALDERA)
 ![Descubrimiento CALDERA](../media/Descubrimiento%20por%20caldera.png)
 
 ### Telemetría Recolectada (Wazuh)
